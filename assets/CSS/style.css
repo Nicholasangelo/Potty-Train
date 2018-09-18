@@ -8,6 +8,7 @@ body {
 }
 .container {
     background-color: white;
+    border: double 1.1em;
 }
 #time {
     position: fixed;
@@ -16,7 +17,8 @@ body {
     padding: 1em;
     border-radius: 100%;
     background-color: white;
-    right: 3%;
+    right: 5%;
+    bottom: 37em;
 }
 header {
     background-image: url("../../images/trainWboyColor.png");

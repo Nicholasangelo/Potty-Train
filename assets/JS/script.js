@@ -29,7 +29,6 @@ $("#babyButton").on("click", function (event) {
         name: childName,
         firstVisit: firstTime,
         frequency: frequency,
-        // nextVisit: nextTime
     };
 
     console.log(newInput);
@@ -39,13 +38,8 @@ $("#babyButton").on("click", function (event) {
     $("#childName").val("");
     $("#timeOfVisit").val("");
     $("#frequency").val("");
-    $("#nextVisit").val("");
-    $("#minutes").val("");
-
 
 })
-
-
 
 database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
