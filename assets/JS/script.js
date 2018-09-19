@@ -4,7 +4,6 @@ function workingClock() {
 }
 setInterval(workingClock, 1000);
 
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCeje1XVuAE-phLQo81198Z5sE2oB9toGA",
@@ -66,26 +65,6 @@ console.log("first: " + firstConvert);
 var freqConvert = moment(frequency, "mm");
 console.log("frequency Converted= " + moment(freqConvert).format("mm"));
 
-//find difference between RIGHT NOW and the first arrival
-var timeDiff = moment().diff(firstConvert);
-  console.log("Difference in time: " + moment(timeDiff).format("hh:mm"));
-
-// TIME APART?
-var remainder = timeDiff % freqConvert;
-console.log("time Apart=" + remainder);
-console.log("time Apart=" + moment(remainder).format("hh:mm"));
-
-  // MINUTES TILL?
-  var minutesTill = freqConvert - remainder;
-  console.log("mins= " + minutesTill);
-  console.log("mins=" + moment(minutesTill).format("mm"));
-
-  var countTill = moment().add(minutesTill);
-  console.log("nextVisit: " + countTill);
-  console.log("nextVisit= " + moment(countTill).format("hh:mm"));
-// TIME OF NEXT
-  var nextTime = moment(countTill).format("hh:mm a");
-  console.log("time of next= " + nextTime);
 
 // end -- MATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATH
 // MATHMATHMATHMMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATH
@@ -93,8 +72,8 @@ console.log("time Apart=" + moment(remainder).format("hh:mm"));
         $("<td>").text(childName),
         $("<td>").text(firstTime),
         $("<td>").text(frequency),
-        $("<td>").text(moment(remainder).format("hh:mm")),
-        $("<td>").text(moment(nextTime).format("mm")),
+        // $("<td>").text
+        // $("<td>").text
     )
 
     $("#table").append(newRow);
