@@ -118,4 +118,6 @@ $("#dogLink").on("click", function() {
 
 })
 
-setInterval(1000 * 60);
+setInterval(function() {
+    window.location.reload();
+  }, 60000);
