@@ -30,11 +30,11 @@
         <table id="table">
             <thead>
                 <tr>
-                    <th>Child Name</th>
-                    <th>First Arrival</th>
-                    <th>Frequency</th>
-                    <th>Next Arrival</th>
-                    <th>Time Until Next Arrival</th>
+                    <th>Name</th>
+                    <th class="firstTimeVisit">First trip to the Potty</th>
+                    <th class="freqWalks">Frequency</th>
+                    <th class="nextWalk">Next trip</th>
+                    <th class="nextWalkTime">Mins to next trip</th>
                 </tr>
             </thead>
 
@@ -50,16 +50,16 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s4">
-                        <input placeholder="Child Name" id="childName" type="text" class="validate">
-                        <label class="active" for="childName">Child Name</label>
+                        <input placeholder="Name" id="childName" type="text" class="validate">
+                        <label class="active" for="childName">Name</label>
                     </div>
                     <div class="input-field col s4">
                         <input placeholder="hh:mm am/pm" id="timeOfVisit" type="text" class="validate">
-                        <label class="active" for="last_name">Time of First Visit</label>
+                        <label id="firstTimeVisit" class="active", class="firstTimeVisit" for="last_name">Time of First Visit</label>
                     </div>
                         <div class="input-field col s4">
                             <input placeholder="00 (mins)" id="frequency" type="text" class="validate">
-                            <label class="active" for="frequency">Frequency of Visits</label>
+                            <label id="#freqWalks" class="active" for="frequency">Frequency</label>
                         </div>
                         <button id="babyButton" class="btn waves-effect waves-light" type="submit" name="action">Submit
                             <i class="material-icons right">child_care</i>

@@ -89,7 +89,33 @@ console.log("first: " + firstConvert);
 })
 
 $("#dogLink").on("click", function() {
+    // var toddler = $("div");
+    // toddler.text("Click here for toddlers!'");
+    // toddler.attr('id', 'toddlerLink');
+    // console.log(toddler);
+
     $("header").css('background-image', 'url("images/trainDog.png")');
+    $(".firstTimeVisit").html("First walk of the day");
+    $(".freqWalks").html("Frequency of walks");
+    $(".nextWalk").html("Next walk");
+    
+    $("#firstTimeVisit").html("First walk of the day");
+    $("#freqWalks").html("Frequency of walks");
+    $(".nextWalkTime").html("Mins to next walk");
+    $("#dogLink").html("Click here for Toddlers!");
+
+    $("#dogLink").on("click", function() {
+        $("header").css('background-image', 'url("images/trainWboyColor.png")');
+    $(".firstTimeVisit").html("First trip to the Potty");
+    $(".freqWalks").html("Frequency");
+    $(".nextWalk").html("Next trip");
+    
+    $("#firstTimeVisit").html("First trip to the Potty");
+    $("#freqWalks").html("Frequency");
+    $(".nextWalkTime").html("Mins to next trip");
+    $("#dogLink").html("Click here for pets");
+    })
+
 })
 
 setInterval(1000 * 60);
