@@ -29,5 +29,10 @@ header {
     background-size: 24em;
     font-family: 'Sonsie One', cursive;
 }
-#dogLink { color: rgba(226, 6, 255, 0.829);
+#dogLink { 
+    color: rgba(226, 6, 255, 0.829);
+    cursor: pointer;
+}
+#babyButton {
+    left: 42%;
 }

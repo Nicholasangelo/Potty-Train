@@ -57,13 +57,21 @@ database.ref().on("child_added", function (childSnapshot) {
 // MATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATH
 
 // converts first arrival into data speak
-var firstConvert = moment(firstTime, "hh:mm a").subtract(1, "years");
+var firstConvert = moment(firstTime, "hh:mm").subtract(1, "years");
 console.log("first: " + moment(firstConvert).format("hh:mm a"));
 console.log("first: " + firstConvert);
+          currentTime = moment();
+          diffTime = moment().diff(moment(firstConvert), "minutes");
+          tRemainder = diffTime % frequency;
+          minutesTillTrain = frequency - tRemainder;
+          nextTrain = moment().add(minutesTillTrain, "minutes");
+          nextTrainFormatted = moment(nextTrain).format("hh:mm a");
 
 //converts frequency into data speak
-var freqConvert = moment(frequency, "mm");
-console.log("frequency Converted= " + moment(freqConvert).format("mm"));
+// var freqConvert = moment(frequency, "mm");
+// console.log("frequency Converted= " + moment(freqConvert).format("mm"));
+
+
 
 
 // end -- MATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATHMATH
@@ -72,11 +80,16 @@ console.log("frequency Converted= " + moment(freqConvert).format("mm"));
         $("<td>").text(childName),
         $("<td>").text(firstTime),
         $("<td>").text(frequency),
-        // $("<td>").text
-        // $("<td>").text
+        $("<td>").text(nextTrainFormatted),
+        $("<td>").text(minutesTillTrain)
     )
 
     $("#table").append(newRow);
 
 })
+
+$("#dogLink").on("click", function() {
+    $("header").css('background-image', 'url("images/trainDog.png")');
+})
+
 setInterval(1000 * 60);
