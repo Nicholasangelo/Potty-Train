@@ -62,10 +62,10 @@ console.log("first: " + moment(firstConvert).format("hh:mm a"));
 console.log("first: " + firstConvert);
           currentTime = moment();
           diffTime = moment().diff(moment(firstConvert), "minutes");
-          tRemainder = diffTime % frequency;
-          minutesTillTrain = frequency - tRemainder;
-          nextTrain = moment().add(minutesTillTrain, "minutes");
-          nextTrainFormatted = moment(nextTrain).format("hh:mm a");
+          remainder = diffTime % frequency;
+          minutesTill = frequency - remainder;
+          nextTrain = moment().add(minutesTill, "minutes");
+          nextFormatted = moment(nextTrain).format("hh:mm a");
 
 //converts frequency into data speak
 // var freqConvert = moment(frequency, "mm");
@@ -80,8 +80,8 @@ console.log("first: " + firstConvert);
         $("<td>").text(childName),
         $("<td>").text(firstTime),
         $("<td>").text(frequency),
-        $("<td>").text(nextTrainFormatted),
-        $("<td>").text(minutesTillTrain)
+        $("<td>").text(nextFormatted),
+        $("<td>").text(minutesTill)
     )
 
     $("#table").append(newRow);
@@ -89,10 +89,6 @@ console.log("first: " + firstConvert);
 })
 
 $("#dogLink").on("click", function() {
-    // var toddler = $("div");
-    // toddler.text("Click here for toddlers!'");
-    // toddler.attr('id', 'toddlerLink');
-    // console.log(toddler);
 
     $("header").css('background-image', 'url("images/trainDog.png")');
     $(".firstTimeVisit").html("First walk of the day");
